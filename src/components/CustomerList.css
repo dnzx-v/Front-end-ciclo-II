@@ -1,0 +1,186 @@
+#root {
+  min-height: 100vh;
+}
+
+.pagina {
+  width: min(100% - 32px, 1180px);
+  margin: 32px auto;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgb(15 23 42 / 4%);
+}
+
+.contenido {
+  padding: 24px;
+}
+
+.catalogo {
+  display: grid;
+  gap: 24px;
+}
+
+.customer-form,
+.table-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.lista-clientes {
+  min-width: 0;
+}
+
+.catalogo-encabezado {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.catalogo-encabezado h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.count {
+  color: #64748b;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.table-card {
+  overflow: hidden;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 11px 12px;
+  border-bottom: 1px solid #eef0f2;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+th {
+  color: #475569;
+  background: #f8fafc;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+td {
+  color: #334155;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.status.active {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status.inactive {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.message {
+  margin: 0;
+  padding: 20px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.message.error {
+  padding: 12px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #b91c1c;
+  background: #fef2f2;
+}
+
+.acciones-cliente {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 6px 9px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.edit-button {
+  color: #334155;
+}
+
+.edit-button:hover {
+  background: #f8fafc;
+}
+
+.delete-button {
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.delete-button:hover:not(:disabled) {
+  background: #fef2f2;
+}
+
+.delete-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.delete-error {
+  color: #b91c1c;
+  font-size: 11px;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #64748b;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .pagina {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+  }
+
+  .contenido {
+    padding: 16px;
+  }
+}
