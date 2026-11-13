@@ -1,0 +1,22 @@
+:root {
+  font-family: "Nunito", "Segoe UI", sans-serif;
+  color: #47363a;
+  background: linear-gradient(135deg, #f0d8ff 0%, #d8c8fe 50%, #e2d8f1 100%);
+  --red-dark: #b9364a;
+  --text-strong: #38282d;
+  --text-soft: #88777b;
+  --border: #f2e5e4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
