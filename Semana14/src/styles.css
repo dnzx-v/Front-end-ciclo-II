@@ -1,0 +1,201 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #30243f;
+  background: #f7f2ff;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+a { color: inherit; text-decoration: none; }
+
+.sitio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #f8f4ff 0%, #efe5ff 52%, #f9f5ff 100%);
+}
+
+.header {
+  background: rgba(255, 255, 255, .76);
+  border-bottom: 1px solid #e7dcf5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-contenido {
+  max-width: 1120px;
+  min-height: 72px;
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #56377a;
+}
+
+.logo span { color: #9a6bd1; }
+
+.menu { display: flex; gap: 28px; }
+
+.menu a {
+  padding: 24px 0 20px;
+  border-bottom: 3px solid transparent;
+  font-weight: 650;
+}
+
+.menu a.active {
+  color: #7046a0;
+  border-bottom-color: #9a6bd1;
+}
+
+.contenido {
+  width: min(1120px, calc(100% - 48px));
+  margin: 36px auto;
+  flex: 1;
+}
+
+.hero {
+  min-height: 330px;
+  margin-bottom: 42px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  padding: 48px;
+  color: white;
+  background: linear-gradient(120deg, #7951a8 0%, #a879d2 55%, #c9a8eb 100%);
+}
+
+.hero div { max-width: 540px; }
+
+h1, h2, h3 { margin-top: 0; }
+
+h1 { font-size: clamp(2.2rem, 5vw, 4rem); }
+
+h2 { font-size: 2rem; margin-bottom: 24px; }
+
+.eyebrow {
+  color: #7046a0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.hero .eyebrow { color: #f0dcff; }
+
+.boton {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 11px 18px;
+  border-radius: 8px;
+  background: #7046a0;
+  color: white;
+  font-weight: 750;
+}
+
+.boton.secundario { background: #56377a; }
+
+.cuadricula {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.tarjeta {
+  overflow: hidden;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(31, 41, 51, .08);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.tarjeta-cuerpo { padding: 20px; }
+
+.tarjeta-cuerpo h3 { margin: 8px 0 4px; font-size: 1.25rem; }
+.tarjeta-cuerpo p { color: #64748b; }
+
+.categoria {
+  color: #7046a0;
+  font-size: .78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.detalle {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  overflow: hidden;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(31, 41, 51, .08);
+}
+
+.detalle > img {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  object-fit: cover;
+}
+
+.detalle-info { padding: 42px; }
+.detalle-info h1 { font-size: clamp(2rem, 4vw, 3.2rem); }
+.ubicacion { color: #64748b; font-weight: 650; }
+
+.detalle dl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 28px 0 12px;
+}
+
+.detalle dl div {
+  padding: 14px;
+  border-radius: 8px;
+  background: #f6f0fc;
+}
+
+.detalle dt { color: #64748b; font-size: .85rem; }
+.detalle dd { margin: 4px 0 0; font-weight: 800; }
+
+.nosotros, .no-encontrada {
+  max-width: 720px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.nosotros h1, .no-encontrada h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+.error { color: #b42318; }
+
+.footer {
+  padding: 24px;
+  text-align: center;
+  color: #695b78;
+  border-top: 1px solid #e7dcf5;
+  background: rgba(255, 255, 255, .76);
+}
+
+@media (max-width: 720px) {
+  .header-contenido { align-items: flex-end; padding-top: 10px; }
+  .menu { gap: 14px; }
+  .menu a { padding-bottom: 14px; }
+  .contenido { width: min(100% - 32px, 1120px); margin-top: 24px; }
+  .hero { min-height: 300px; padding: 28px; }
+  .detalle { grid-template-columns: 1fr; }
+  .detalle > img { min-height: 260px; height: 260px; }
+  .detalle-info { padding: 24px; }
+}
